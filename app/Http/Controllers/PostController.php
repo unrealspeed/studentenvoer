@@ -36,10 +36,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, array(
-          'recnaam' => 'required|max:45',
+          'recnaam' => 'required|max:85',
           'recsoort' => 'required|max:15',
           'ingredienten' => 'required',
-          'kcal' => 'required',
+          'kcal' => 'required|numeric',
           'stappen' => 'required',
         ));
 
